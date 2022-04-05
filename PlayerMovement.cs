@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
         if (posX < -xBound || posX > xBound)
         {
             int sign = (int) (posX / Math.Abs(posX));
-            transform.position = new Vector3(sign * posX, transform.position.y, transform.position.z);
+            transform.position = new Vector3(sign * xBound, transform.position.y, transform.position.z);
         }
         float horizontal = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontal * Time.deltaTime * speed);
